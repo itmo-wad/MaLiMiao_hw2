@@ -20,7 +20,7 @@ This project is a Flask-based web application developed in Python, offering user
 - Python 3.13.2
 - MongoDB Compass 7.0.16
 ### Run the application
-```python
+python
 python app.py
 ```
 Dataset
@@ -32,5 +32,4 @@ brew services start mongodb-community@8.0
 ```
 brew services stop mongodb-community@8.0
 ```
-http://127:0.0.1:5000
-```
+Visit http://127.0.0.1:5000/ to view the profile page.
