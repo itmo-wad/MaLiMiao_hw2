@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Login</h1>
+        <form method="POST" action="{{ url_for('login') }}">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="{{ url_for('register') }}">Register</a></p>
+    </div>
+
+    <!-- 小表情掉落的 JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(() => {
+                const emojiArray = ['🌸', '💖', '✨', '🎀', '💗', '🍭'];
+                const emoji = document.createElement('div');
+                emoji.classList.add('falling-emoji');
+                emoji.textContent = emojiArray[Math.floor(Math.random() * emojiArray.length)];
+                document.body.appendChild(emoji);
+
+                emoji.style.left = Math.random() * window.innerWidth + 'px';
+                emoji.style.animationDuration = Math.random() * 2 + 3 + 's';
+
+                setTimeout(() => emoji.remove(), 5000);
+            }, 300);
+        });
+    </script>
+
+</body>
+</html>

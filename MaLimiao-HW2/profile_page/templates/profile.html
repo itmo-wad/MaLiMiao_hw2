@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ profile.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="profile-container">
+        <header>
+            <h1>{{ profile.title }}</h1>
+        </header>
+        <section class="profile-content">
+            <div class="profile-image">
+                <img src="{{ profile.profile_image }}" alt="个人头像">
+            </div>
+            <div class="profile-bio">
+                <h2>{{ profile.name }}</h2>
+                <p>{{ profile.bio }}</p>
+                <div class="skills-section">
+                    <h3>Skills</h3>
+                    <div class="skills-list">
+                        {% for skill in profile.skills %}
+                            <div class="skill">{{ skill }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="notifications-section">
+                    <h3>通知</h3>
+                    <ul class="notifications-list">
+                        {% if profile.notifications %}
+                            <li class="notification-item">
+                                {{ profile.notifications[0].message }} 
+                                <span class="timestamp">({{ profile.notifications[0].timestamp }})</span>
+                            </li>
+                        {% else %}
+                            <li class="notification-item">暂无通知</li>
+                        {% endif %}
+                    </ul>
+                </div>
+                
+                <div class="profile-actions">
+                    <a href="{{ url_for('update_profile') }}" class="btn">reset profile</a>
+                    <a href="{{ url_for('change_password') }}" class="btn">change password</a>
+                    <a href="{{ url_for('logout') }}" class="btn btn-logout">logout</a>
+                    <form action="{{ url_for('delete_account') }}" method="POST" onsubmit="return confirm('confirm again!');">
+                        <button type="submit" class="btn btn-delete">delete account</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; Produced by Ma Limiao.</p>
+        </footer>
+    </div>
+
+    <!-- 小表情掉落的 JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(() => {
+                const emojiArray = ['🌸', '💖', '✨', '🎀', '💗', '🍭'];
+                const emoji = document.createElement('div');
+                emoji.classList.add('falling-emoji');
+                emoji.textContent = emojiArray[Math.floor(Math.random() * emojiArray.length)];
+                document.body.appendChild(emoji);
+
+                emoji.style.left = Math.random() * window.innerWidth + 'px';
+                emoji.style.animationDuration = Math.random() * 2 + 3 + 's';
+
+                setTimeout(() => emoji.remove(), 5000);
+            }, 300);
+        });
+    </script>
+</body>
+</html>
