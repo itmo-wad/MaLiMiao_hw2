@@ -12,6 +12,7 @@ change password.
 Registration Page（Here users can enter their own information, select their own personal skills, upload photos, etc.）
 <img width="1425" alt="image" src="https://github.com/user-attachments/assets/94db922a-dde0-42f4-83f7-fda4329bb437" />
 User data is stored in the database.
+
 This project is a Flask-based web application developed in Python, offering user authentication features and a customized profile page. It enables users to register accounts, log in, modify profile details, update passwords, and manage profile pictures. The backend leverages MongoDB for secure storage of user credentials, with password hashing implemented to enhance security.
 
 ## Getting Started
