@@ -1,5 +1,11 @@
 # MaLiMiao_hw2
 ## Description
+<img width="1382" alt="image" src="https://github.com/user-attachments/assets/b9a4b97f-33ef-4bde-acc2-1fe057f16861" />
+Login screen
+<img width="1274" alt="image" src="https://github.com/user-attachments/assets/ca410f08-35e2-48b4-aa03-68dd1efaf124" />
+Personal Homepage
+<img width="1312" alt="image" src="https://github.com/user-attachments/assets/d3538b44-ccfb-44b9-85f0-5badc734d52a" />
+Registration Page
 This project is a Flask-based web application developed in Python, offering user authentication features and a customized profile page. It enables users to register accounts, log in, modify profile details, update passwords, and manage profile pictures. The backend leverages MongoDB for secure storage of user credentials, with password hashing implemented to enhance security.
 
 ## Getting Started
