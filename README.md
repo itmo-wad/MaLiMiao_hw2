@@ -1,12 +1,12 @@
 # MaLiMiao_hw2
 ## Description
-This project is a web application built with Python and Flask, providing users with authentication functionality and a personalized profile page. The application allows users to create accounts, authenticate, update profile information, change passwords, and manage profile pictures. The backend uses MongoDB for storing user credentials, and password hashing is implemented for security.
-  
+This project is a Flask-based web application developed in Python, offering user authentication features and a customized profile page. It enables users to register accounts, log in, modify profile details, update passwords, and manage profile pictures. The backend leverages MongoDB for secure storage of user credentials, with password hashing implemented to enhance security.
+
 ## Getting Started
 ### Dependencies
 - VScode, pycharm
-- Python 3.9
-- MongoDB Compass 1.45.2
+- Python 3.13.2
+- MongoDB Compass 7.0.16
 ### Executing program
 ```python
 python app.py
@@ -27,16 +27,13 @@ http://127:0.0.1:5000
 ```
 
 ## Introduction
-- Authentication Form: The application renders an authentication form at http://localhost:5000/ where users can log in.
-- Account Creation: Users can create new accounts. Upon successful account creation, users are redirected to their profile page, which displays their personal data.
-- Password Hashing: Passwords are securely hashed using appropriate hashing algorithms before being stored in the database.
-- Login Redirect: If a user is successfully authenticated, they are redirected to their profile page at [http://localhost:5000/profile](http://localhost:5000/profile).
-- Profile Page: The profile page is accessible only to authenticated users and is dynamically generated based on their account data stored in MongoDB.
-- Profile Information: Users can view and update their profile information, such as their name, bio, and other personal details.
-- Profile Picture: New users are assigned a default profile picture (images/profile.jpg).
-Users can update their profile picture through the application.
-- Password Management
-Password Change: Users can change their password via a dedicated page after logging in.
-- Logout: A logout feature is implemented, allowing users to end their session securely.
-- Notifications
-User Notifications: Active users will receive a notification when a new account is created, providing them with timely updates within the system.
+- Authentication Form: Users can log in via a form at http://localhost:5000/.
+- Account Creation: New users can register, and upon success, are redirected to their personalized profile page.
+- Password Hashing: Passwords are securely hashed before storage in MongoDB.
+- Login Redirect: Successful login redirects users to their profile page at http://localhost:5000/profile.
+- Profile Page: Dynamically generated for authenticated users, displaying data from MongoDB.
+- Profile Information: Users can view and update personal details like name and bio.
+- Profile Picture: Default image (images/profile.jpg) is assigned, with an option to upload a new one.
+- Password Management: Users can change passwords post-login.
+- Logout: Secure logout feature to end sessions.
+- Notifications: Active users are notified of new account creations.
