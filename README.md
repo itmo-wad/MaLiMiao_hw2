@@ -20,7 +20,7 @@ This project is a Flask-based web application developed in Python, offering user
 - Python 3.13.2
 - MongoDB Compass 7.0.16
 ### Run the application
-python
+```python
 python app.py
 ```
 Dataset
